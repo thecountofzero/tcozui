@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<title>dirty_bit</title>
+		<style type='text/css'>
+            .dirty { background-color: yellow; }
+        </style>
+	</head>
+	<body>
+		<div id="model"></div>
+		
+		<script type='text/ejs' id='modelEJS'>
+			
+			<div <%= person %>>
+				Name:<input type="text" id="name" name="name" value="<%= person.name %>" /><br/>
+				Age:<select id="age" name="age">
+						<option value="25" <%= (person.age===25 ? 'selected' : '') %> >25</option>
+						<option value="30" <%= (person.age===30 ? 'selected' : '') %> >30</option>
+						<option value="35" <%= (person.age===35 ? 'selected' : '') %> >35</option>
+					</select>
+				<br/>
+				Description:<br/>
+				<textarea id='textarea' name='description' rows='10' cols='30'><%= person.description %></textarea><br/>
+				Sex:
+					<input type="radio" id="sex" name="sex" value="m" <%= (person.sex==='m' ? 'checked' : '') %> >Male&nbsp;&nbsp;
+					<input type="radio" id="sex" name="sex" value="?" <%= (person.sex==='?' ? 'checked' : '') %> >Unknown&nbsp;&nbsp;
+					<input type="radio" id="sex" name="sex" value="f" <%= (person.sex==='f' ? 'checked' : '') %> >Female<br/>
+				Likes JavaScript:<input type="checkbox" id="likesJS" name="likesJS" value="true" <%= (person.likesJS ? 'checked' : '') %> ><br/>
+				Password:<input type="password" id="password" name="password" value="<%= person.password %>" /><br/>
+				Bogus Field:<input type="text" id="bogus" name="bogus" value="<%= person.name %>" /><br/>
+			</div>
+			
+		</script>
+			
+		<script type='text/javascript' src='../../../steal/steal.js?tcozui/dirty_bit/dirty_bit_test.js,development'></script>
+		<script type='text/javascript'>
+				
+		</script>
+	</body>
+</html>
