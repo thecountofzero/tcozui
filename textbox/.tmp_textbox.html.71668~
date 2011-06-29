@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<title>Textbox Controller</title>
+	</head>
+	<body>
+		<input id='textbox' type='text' size='30'/><br/>
+		<input id='password' type='password' size='30'/><br/>
+		<textarea id='textarea' rows='10' cols='30'></textarea><br/>
+		<input id='check' type='checkbox' value='1'/><br/>
+		<select id='dropdown'><option value='1'>dropdown option</option></select><br/><br/>
+		<input type="button" value="enable" id="enable">&nbsp;&nbsp;<input type="button" value="disable" id="disable">		
+		
+		<script type='text/javascript' src='../../steal/steal.js?tcozui/textbox,development'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('input, textarea, select').tcozui_textbox();
+				
+				var textbox = $("#textbox");
+				
+				$('#enable').click(function(el, ev) {
+					
+					textbox.trigger("enable");
+				});
+				
+				$('#disable').click(function(el, ev) {
+					
+					textbox.trigger("disable");
+				});	
+
+			});
+		</script>
+	</body>
+</html>
