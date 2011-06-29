@@ -1,0 +1,20 @@
+<div class="tree-plugin">
+	<ul class="form">
+		<li>
+			<ul class="dl-std" id="node-list">
+				<% for(var i = 0, len = items.length; i < len ; i++) { %>
+					<%= $.View('//remotesupport/plugins/tree/views/item.ejs',{
+							'item': items[i], 
+							'getId': getId, 
+							'getName': getName, 
+							'allowDelete': allowDelete, 
+							'deleteLogic': deleteLogic,
+							'getChildren': getChildren,
+							'getChildName': getChildName
+						}) 
+					%>
+				<% } %>
+			</ul>
+		</li>
+	</ul>
+</div>

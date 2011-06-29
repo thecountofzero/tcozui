@@ -1,0 +1,16 @@
+<ul>
+
+<li <%= subitem %> class="show-hand collapsed <%= getId.call(item) %> invoke-show-subitem leaf-node node">
+	<div class="dl_grid_2"><span class="">&nbsp;</span></div>
+	<div class="dl_grid_4 colorswitch-black leaf-node-label"><%= getChildName.call(subitem) %></div>
+	<div class="dl_grid_1">&nbsp;</div>
+	<% if( allowDelete && deleteLogic.call(item)) { %>
+		<div class="dl_grid_1 invoke-showOnHover">
+			<ol class="text-controls invoke-delete-subitem ">
+				<li><span class="ui-icon ui-icon-trash"></span></li>
+			</ol>
+		</div>
+	<%}%>
+</li>
+
+</ul>

@@ -1,0 +1,36 @@
+<ul>
+
+<li <%= item %> class="show-hand invoke-showitem parent-node node" id="<%= getId.call(item) %>">
+	<div class="dl_grid_1"><span class="ui-icon ui-icon-circle-plus invoke-expandItem"></span></div>
+	<div class="dl_grid_5 colorswitch-black"><%= getName.call(item)  %></div>
+	<div class="dl_grid_1">&nbsp;</div>
+	<% if( allowDelete && deleteLogic.call(item)) { %>
+		<div class="dl_grid_1 invoke-showOnHover">
+			<ol class="text-controls invoke-deleteitem ">
+				<li><span class="ui-icon ui-icon-trash"></span></li>
+			</ol>
+		</div>
+	<%}%>
+</li>
+
+<% var children = getChildren.call(item) %>
+
+<ul>
+<% for(var j = 0, clen = children.length; j < clen ; j++) { %>
+
+	<%= $.View('//remotesupport/plugins/tree/views/subitem.ejs',{
+		'item': item,
+		'subitem': children[j], 
+		'getId': getId, 
+		'getName': getName, 
+		'allowDelete': allowDelete, 
+		'deleteLogic': deleteLogic,
+		'getChildren': getChildren,
+		'getChildName': getChildName
+		}) 
+	%>
+
+<% } %>
+</ul>
+
+</ul>
