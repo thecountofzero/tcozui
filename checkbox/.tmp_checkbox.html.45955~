@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<title>Checkbox Controller</title>
+	</head>
+	<body>
+		<input type="checkbox" checked disabled class="rsui-checkbox" /><br/><br/>
+		<input type="button" value="enable" id="enable">&nbsp;&nbsp;<input type="button" value="disable" id="disable"><br/><br/>
+		<input type="button" value="dirty" id="dirty">&nbsp;&nbsp;<input type="button" value="clean" id="clean">
+		<input type="button" value="toggle select" id="select">
+		
+		<script type='text/javascript' src='../../steal/steal.js?tcozui/checkbox,development'></script>
+		<script type='text/javascript'>			
+			$(document).ready(function() {
+				var checkbox = $(".rsui-checkbox");					
+				checkbox.tcozui_checkbox();
+				
+				$('#enable').click(function(el, ev) {
+					
+					checkbox.tcozui_checkbox('enable');
+				});
+				
+				$('#disable').click(function(el, ev) {
+					
+					checkbox.tcozui_checkbox('disable');
+				});	
+				
+				$('#dirty').click(function(el, ev) {
+					
+					checkbox.trigger('dirty');
+				});
+				
+				$('#clean').click(function(el, ev) {
+
+					checkbox.trigger('clean');
+				});
+				
+				$('#select').click(function(el, ev) {
+					
+					checkbox.trigger('select');
+				});						
+			});			
+		</script>
+	</body>
+</html>

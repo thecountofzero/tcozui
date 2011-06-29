@@ -1,0 +1,41 @@
+.checkbox-hide { opacity: 0; filter:alpha(opacity=0); }
+
+.checkbox-main {
+	display:inline-block; 
+	width: 20px;
+	height: 19px;
+	background-image: url('resources/img/checkbox.png');
+	background-repeat: no-repeat; 	
+}
+
+.checkbox {
+	background-position: -17px 0px; 
+}
+
+.checkbox-checked {
+	background-position: 0 0;
+}
+
+.checkbox-dirty { 
+	background-position: -17px -16px; 
+}
+
+.checkbox-checked-dirty { 
+	background-position: 0px -16px; 
+}
+
+.checkbox-disabled { 
+	background-position: -17px -32px; 
+}
+
+.checkbox-checked-disabled {  
+	background-position: 0px -32px; 
+}
+
+.checkbox-active {
+	background-position: -17px -48px; 
+}
+
+.checkbox-checked-active { 
+	background-position: 0px -48px; 
+}
