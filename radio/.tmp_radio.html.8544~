@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<title>Radio Button Controller</title>
+	</head>
+	<body>
+		<input type="radio" id="color" name="color" value="red" class="rsui-radio" />red&nbsp;&nbsp;
+		<input type="radio" id="color1" name="color" value="green" class="rsui-radio" />green&nbsp;&nbsp;
+		<input type="radio" id="color2" name="color" value="blue" class="rsui-radio" />blue<br/><br/>
+		<input type="button" value="enable" id="enable">&nbsp;&nbsp;<input type="button" value="disable" id="disable"><br/><br/>
+		<input type="button" value="dirty" id="dirty">&nbsp;&nbsp;<input type="button" value="clean" id="clean"><br/><br/>
+		<input type="button" value="select" id="select">
+		
+		<script type='text/javascript' src='../../../steal/steal.js?tcozui/radio,development'></script>
+		<script type='text/javascript'>			
+			$(document).ready(function() {
+				
+				var radio = $(".rsui-radio");					
+				radio.tcozui_radio();
+				
+				$('#enable').click(function(el, ev) {
+					
+					radio.tcozui_radio('enable');
+				});
+				
+				$('#disable').click(function(el, ev) {
+					
+					radio.tcozui_radio('disable');
+				});	
+				
+				$('#dirty').click(function(el, ev) {
+					
+					radio.trigger('dirty');
+				});
+				
+				$('#clean').click(function(el, ev) {
+					
+					radio.trigger('clean');
+				});	
+				
+				$('#select').click(function(el, ev) {
+					
+					$('#color1').trigger('select');
+				});
+			});		
+		</script>
+	</body>
+</html>
