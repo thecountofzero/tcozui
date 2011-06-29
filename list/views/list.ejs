@@ -1,0 +1,22 @@
+<div class="list-plugin">
+	<ul class="form">
+		<li>
+			<ul class="dl-std" id="tag-list">
+			
+				<li class="heading">
+					<div class="dl_grid_8"><%= heading %></div>
+				</li>
+					
+				<% for(var i = 0, len = list.length; i < len ; i++){ %>
+					<%= $.View('//tcozui/list/views/item.ejs',{
+							'item': list[i], 
+							'getId': getId, 
+							'getName': getName,							
+							'allowDelete': allowDelete, 
+							'deleteLogic': deleteLogic
+						}) %>
+				<% } %>
+			</ul>
+		</li>
+	</ul>
+</div>

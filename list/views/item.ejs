@@ -1,0 +1,12 @@
+<li <%= item %> class="show-hand invoke-showitem">
+	<div class="dl_grid_1"><span class="">&bull;</span></div>
+	<div class="dl_grid_5 colorswitch-black"><%= getName.call(item)  %></div>
+	<div class="dl_grid_1">&nbsp;</div>
+	<% if( allowDelete && deleteLogic.call(item)) {%>
+		<div class="dl_grid_1 invoke-showOnHover">
+			<ol class="text-controls invoke-deleteitem ">
+				<li class="trash"><span class="ui-icon ui-icon-trash"></span></li>
+			</ol>
+		</div>
+	<%}%>
+</li>

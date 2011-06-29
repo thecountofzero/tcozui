@@ -1,0 +1,96 @@
+body {
+	font-family: arial;
+	background-color: #fff;	
+	font-size: 10px;
+}
+
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+ {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+.searcher {
+	margin-bottom: 20px;
+}                  
+
+div .list-plugin {
+	height: 300px;
+	width: 270px;
+	overflow: auto;
+}
+
+ul>li.show-hand {
+	cursor: pointer;
+}
+
+ul.dl-std { margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;  }
+ul.dl-std dt { color: #666; padding: 3px 12px; font-size: 1.3em; background: #FFF repeat-x bottom left; text-shadow: 1px 1px 1px #fff; font-weight: bold; border-top: solid 1px #DFDFDF; }
+ul.dl-std li { clear: both; padding: 0.4em 1.0em; margin: 0 0 1px 0; background: #F4F4F4  repeat-x bottom left; overflow: hidden; font-size: 1.1em; }
+
+ul.dl-std li:Hover { background: #ffffff; }
+ul.dl-std li.selected { background: #a9dbf6; }
+ul.dl-std li ol.text-controls { float: right; display: block; list-style-type: none; margin: 0; padding: 0; }
+
+ul.dl-std li ol.text-controls li { float: left; margin: 0 0 0 0.3em; padding: 0;  }
+
+ul.dl-std li div.dl_grid_1,
+ul.dl-std li div.dl_grid_2,
+ul.dl-std li div.dl_grid_3,
+ul.dl-std li div.dl_grid_4,
+ul.dl-std li div.dl_grid_5,
+ul.dl-std li div.dl_grid_6,
+ul.dl-std li div.dl_grid_7,
+ul.dl-std li div.dl_grid_8 { float: left; line-height: 1.7em; }
+
+ul.dl-std li.heading { 
+	font-weight: bold; 
+	background: #ababab;
+	
+	-moz-border-radius-topright: 6px;
+	-moz-border-radius-topleft: 6px;
+	-webkit-border-radius-topright: 6px;
+    -webkit-border-radius-topleft: 6px;
+}
+
+ul.dl-std li.heading:Hover { background: #ababab; }
+
+ul.dl-sub {
+	margin-left:25px;
+	background:transparent; 
+}
+
+ul .dl_grid_1 { width: 12.5%; }
+ul .dl_grid_2 { width: 25%; }
+ul .dl_grid_3 { width: 37.5%; }
+ul .dl_grid_4 { width: 50%; }
+ul .dl_grid_5 { width: 62.5%; }
+ul .dl_grid_6 { width: 75%; }
+ul .dl_grid_7 { width: 87.5%; }
+ul .dl_grid_8 { width: 100%; }
+ 
+.hidden{
+	display:none;
+}
+
+fieldset { 
+	margin:0;
+  	border:0;
+  	outline:0;
+  	font-size:100%;
+  	vertical-align:baseline;
+  	background:transparent;
+}
